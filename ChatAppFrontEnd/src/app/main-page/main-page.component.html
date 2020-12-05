@@ -1,0 +1,40 @@
+<div>
+    <div class="row">
+        <div class="col-4">
+            <h3>Logged in as: {{ loggedInUser }}</h3>
+            <button type="button" (click)="logout()" class="btn btn-danger" style="margin-bottom: 15px;">Log out</button>
+            <form>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="room" placeholder="Create chat room..." #name>
+                </div>
+                <button type="button" 
+                  class="btn btn-primary"
+                  (click)="createChatRoom(name)">Create Chat Room</button>
+            </form>
+            <div *ngFor="let room of chatRooms">
+                <app-chat-room
+                    (click)="selectChatRoom(chatRoom)"
+                    [chatRoom]="room"
+                    #chatRoom></app-chat-room>
+            </div>
+        </div>
+        <div class="col-8">
+            <h4 *ngIf="(selectedChatRoom != null)">Chat room: {{ selectedChatRoom.name }}</h4>
+            <div>
+                <form>
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="message" placeholder="Type message..." #text>
+                    </div>
+                    <button type="button" 
+                      class="btn btn-primary"
+                      (click)="addChatMessage(text)">Submit</button>
+                  </form>
+            </div>
+            <div *ngFor="let chatMessage of chatMessages">
+                <app-chat-message
+                    [chatMessage]="chatMessage"></app-chat-message>
+            </div>
+        </div>
+    </div>
+</div>
+

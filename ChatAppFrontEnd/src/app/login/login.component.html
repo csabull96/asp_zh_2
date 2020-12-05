@@ -1,0 +1,21 @@
+<div id="loginPanel">
+    <form id="formPanel">
+        <input class="form-controller form-unpit"
+            type="text"
+            placeholder="Username"
+            #username/>
+        <input class="form-controller form-unpit"
+            type="password"
+            placeholder="Password"
+            #password/>
+        <button type="button"
+            class="form-controller form-button"
+            (click)="login(username, password)">
+            LOGIN
+        </button>
+        <p class="form-controller form-label">
+            <span>You don't have an account yet? </span>
+            <span class="register"><a routerLink='/register'>Register</a></span>
+        </p>
+    </form>
+</div>

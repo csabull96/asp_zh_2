@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+}
+
+#loginPanel {
+    width: 350px;
+    height: 250px;
+    background-color: #343a40;
+    border: 0px solid black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.form-controller {
+    display: block;
+    margin: 15px 0px;
+    padding: 10px;
+    width: 100%;
+    border: 0px;
+}
+
+.form-label {
+    text-align: center;
+    color: gray;
+    font-size: 0.8em;
+}
+
+.register {
+    color: orange;
+    font-weight: bold;
+}
+
+.form-button {
+    background-color: orange;
+    color: white;
+    padding: 15px;
+}
+
+.form-input {
+    background-color: #eeeeee;
+}
+
+#formPanel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 30px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
